@@ -10,7 +10,7 @@ provide a second-hand trading market for only UBC students
 #### for sellers to post and display second-hand items
 #### buyers can negotiate the price with sellers ***(how?)***
 #### sellers can decide the final price based on negotiation
-#### item calegory classification based on navbar
+#### item category classification based on navbar
 #### item ranking according to price or ***seller’s review score*** for displaying
 #### sells not only second-hand items but also academic services like tutoring ***(future function)***
 # What type of data will it store?
