@@ -4,11 +4,11 @@ Team project for CPSC455
 # Who is it for?
 Our project is targeted at UBC students inside campus.
 # What will it do?
-#### provide a second-hand trading market for only UBC students
+provide a second-hand trading market for only UBC students
 #### student authentication, to avoid defrauding (fake student ID)
 #### students can choose to become a seller or buyer
 #### for sellers to post and display second-hand items
-#### buyers can negotiate the price with sellers**(how?)**
+#### buyers can negotiate the price with sellers **(how?)**
 #### sellers can decide the final price based on negotiation
 #### item calegory classification based on navbar
 #### item ranking according to price or **seller’s review score** for displaying
