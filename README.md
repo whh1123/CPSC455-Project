@@ -21,3 +21,4 @@ string, integer, picture
 Users can access to their own account information and all the posted item information through website.
 # What is some additional functionality you can add/remove based on time constrains?
 If time allows, the market will sell not only second-hand items but also academic services like tutoring service.
+We also want to create a channel for students to find a team for the same activity.
