@@ -1,4 +1,5 @@
 import Product from '../model/productSchema.js';
+import User from '../model/userSchema.js';
 
 
 export const getProducts = async (request, response) => {
@@ -13,8 +14,10 @@ export const getProducts = async (request, response) => {
 
 export const getProductById = async (request, response) => {
     try {
-        const products = await Product.findOne({ 'id': request.params.id });
-        response.json(products);
+        const product = await Product.findOne({ 'id': request.params.id }).lean();
+        const seller = await User.findOne({'_id': product.sellerID }).lean();
+        const newproduct = {...product, sellerID: seller};
+        response.json(newproduct);
     }catch (error) {
 
     }
@@ -36,17 +39,6 @@ export const getProductsByKeyword = async (request, response) => {
         const regex = new RegExp(keyword, 'ig');
         const products = await Product.find({ name: regex });
         response.json(products);
-    }catch (error) {
-        console.log(error)
-    }
-}
-
-export const getProductsSeller = async (request, response) => {
-    try {
-        const id = request.params.id;
-        
-        const seller = await Product.findOne({ 'id':id }).populate('sellerID');
-        response.json(seller);
     }catch (error) {
         console.log(error)
     }

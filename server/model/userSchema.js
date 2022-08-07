@@ -1,6 +1,9 @@
 import mongoose from 'mongoose';
+const { Schema } = mongoose;
+
 
 const userSchema = new mongoose.Schema({
+    _id: Schema.Types.ObjectId,
     firstname: {
         type: String,
         required: true,

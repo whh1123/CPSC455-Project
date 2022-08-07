@@ -31,7 +31,7 @@ const Profile = ({ account, setAccount }) => {
     
     return (
         <>
-            <Link onClick={handleClick}><Typography style={{ marginTop: 2 }}>{account}</Typography></Link>
+            <Link to={`/myinfo/account`} onClick={handleClick}><Typography style={{ marginTop: 2 }}>{account}</Typography></Link>
             <Menu
                 anchorEl={open}
                 open={Boolean(open)}

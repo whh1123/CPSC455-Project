@@ -83,13 +83,13 @@ const DetailView = ({ history, match }) => {
     const getProductValues = async () => {
         setLoading(true);
         const response = await getProductById(id);
-        console.log(response.data);
+        console.log('DetailView\n' + response.data);
         setProduct(response.data);
         setLoading(false);
     }
     useEffect(() => {
         getProductValues();
-    }, [getProductValues]);
+    }, []);
 
     return (
         <Box className={classes.component}>
@@ -104,7 +104,7 @@ const DetailView = ({ history, match }) => {
                         <Typography>
                             <span className={classes.price}>₹{product.price.cost}</span>&nbsp;&nbsp;&nbsp; 
                         </Typography>
-                        <ProductDetail product={product} />
+                        {loading ? <div></div> : (<ProductDetail product={product} />)}
                     </Grid>
                 </Grid>
             }   

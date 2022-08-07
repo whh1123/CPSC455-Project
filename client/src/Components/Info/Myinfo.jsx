@@ -19,15 +19,18 @@ const useStyle = makeStyles(theme => ({
         display: 'flex',
         fontWeight: 600,
         '& li': {
-            fontSize: '0.9em',
+            fontSize: '2em',
             cursor: 'pointer',
-            '& ::after': {
-                content: "",
-                display: 'block',
-                width: 0,
-                height: '2px',
-                background: '#000000',
-                transition: 'width 0.3s'
+            // '& ::after': {
+            //     content: "",
+            //     display: 'block',
+            //     width: 0,
+            //     height: '2px',
+            //     background: '#000000',
+            //     transition: 'width 0.3s'
+            // }
+            '& NavLink': {
+                textDecoration: 'none'
             }
         }
     },
@@ -38,7 +41,7 @@ const useStyle = makeStyles(theme => ({
     //     }
     // },
     activlink: {
-        '& li::after': {
+        // '& li': {
             content: "",
             display: 'block',
             width: 0,
@@ -46,25 +49,25 @@ const useStyle = makeStyles(theme => ({
             background: '#000000',
             transition: 'width 0.3s',
             width: '100%'
-        }
+        // }
     },
-    nav: {
-        width: '100%',
-        position: 'fixed',
-        top: 0,
-        height: '70px',
-        alignItems: 'center',
-        fontSize: '1.1em',
-        fontWeight: 600,
-        display: 'flex',
-        backgroundColor: 'transparent',
-        transition: 'all 0.5s linear',
-        zIndex: 1000,
-        '& active': {
-            background: 'white',
-            boxShadow: '0 5px 5px -2px rgba(0, 0, 0, 0.4)'
-        }
-    }
+    // nav: {
+    //     width: '100%',
+    //     position: 'fixed',
+    //     top: 0,
+    //     height: '70px',
+    //     alignItems: 'center',
+    //     fontSize: '1.1em',
+    //     fontWeight: 600,
+    //     display: 'flex',
+    //     backgroundColor: 'transparent',
+    //     transition: 'all 0.5s linear',
+    //     zIndex: 1000,
+    //     '& active': {
+    //         background: 'white',
+    //         boxShadow: '0 5px 5px -2px rgba(0, 0, 0, 0.4)'
+    //     }
+    // }
     }));
 
 const Myinfo = () => {
@@ -96,8 +99,9 @@ const Myinfo = () => {
             </nav> */}
             <div>
                 
+                
                 <h2>My Info</h2>
-                <nav className={classes.nav} >
+              
                 <ul className={classes.navLinks}>
                     <li>
                     <NavLink activeClassName={classes.activlink} to={`${url}/account`}>Account</NavLink>
@@ -117,7 +121,7 @@ const Myinfo = () => {
                     <Selling />
                     </Route>
                 </Switch>
-                </nav>
+             
             </div>
         </>
     )

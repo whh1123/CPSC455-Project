@@ -28,6 +28,13 @@ const ProductDetail = ({ product }) => {
     const classes = useStyle();
     const adURL = 'https://rukminim1.flixcart.com/lockin/774/185/images/CCO__PP_2019-07-14.png?q=50';
     const date = new Date(new Date().getTime()+(5*24*60*60*1000));
+
+    const seller = product.sellerID;
+    console.log("seeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeller")
+    console.log("ProductDetail\n" + product)
+    console.log(product.sellerID)
+
+    // console.log(seller)
     // const data = export const getProductsByKeyword = async (request, response) => {
     // try {
     //     const keyword = request.params.keyword;
@@ -45,6 +52,14 @@ const ProductDetail = ({ product }) => {
                     <TableRow className={classes.smallText}>
                         <TableCell className={classes.greyTextColor}>Description</TableCell>
                         <TableCell>{product.description}</TableCell>
+                    </TableRow>
+                    <TableRow className={classes.smallText}>
+                        <TableCell className={classes.greyTextColor}>Seller</TableCell>
+                        <TableCell className={classes.smallText}>
+                            {/* <span style={{ color: '#2874f0' }}>{seller.username}</span> */}
+                            <Typography>Phone:</Typography>
+                            <Typography>Email:</Typography>
+                        </TableCell>
                     </TableRow>
                 </TableBody>
             </Table>

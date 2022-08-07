@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+const { Schema } = mongoose;
 import autoIncrement from 'mongoose-auto-increment';
 
 const productSchema = new mongoose.Schema({
@@ -10,11 +11,13 @@ const productSchema = new mongoose.Schema({
     quantity: Number,
     description: String,
     discount: String,
-    tagline: String
-    // sellerID:[{
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'User'
-    // }]
+    tagline: String,
+    genre: String,
+    name: String,
+    sellerID:{
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 });
 
 autoIncrement.initialize(mongoose.connection);
