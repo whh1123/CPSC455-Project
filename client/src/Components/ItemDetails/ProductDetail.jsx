@@ -50,12 +50,12 @@ const ProductDetail = ({ product }) => {
             <Table>
                 <TableBody>
                     <TableRow className={classes.smallText}>
-                        <TableCell className={classes.greyTextColor}>Description</TableCell>
-                        <TableCell>{product.description}</TableCell>
+                        <TableCell   style={{ width: "15%" }} className={classes.greyTextColor}>Description</TableCell>
+                        <TableCell  align='left'>{product.description}</TableCell>
                     </TableRow>
                     <TableRow className={classes.smallText}>
-                        <TableCell className={classes.greyTextColor}>Seller</TableCell>
-                        <TableCell className={classes.smallText}>
+                        <TableCell  align='left' className={classes.greyTextColor}>Seller</TableCell>
+                        <TableCell  align='left' className={classes.smallText}>
                             {/* <span style={{ color: '#2874f0' }}>{seller.username}</span> */}
                             <Typography>Phone:</Typography>
                             <Typography>Email:</Typography>
