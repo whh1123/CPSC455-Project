@@ -54,7 +54,10 @@ const data = {
     },
     description: '',
     discount: '', 
-    tagline: '' 
+    tagline: '' ,
+    genre: '',
+    name: '',
+    sellerID: ''
 };
 
 const DetailView = ({ history, match }) => {
@@ -85,6 +88,8 @@ const DetailView = ({ history, match }) => {
         const response = await getProductById(id);
         console.log('DetailView\n' + response.data);
         setProduct(response.data);
+        console.log("hahahahahahahahahahahahahahahahaha")
+        console.log(product)
         setLoading(false);
     }
     useEffect(() => {
@@ -101,8 +106,13 @@ const DetailView = ({ history, match }) => {
                     </Grid>
                     <Grid item lg={8} md={8} sm={8} xs={12} className={classes.rightContainer}>
                         <Typography>{product.title.longTitle}</Typography>
+                        <Typography className={clsx(classes.greyTextColor, classes.smallText)} style={{marginTop: 5}}>
+                            {product.genre}
+                        </Typography>
                         <Typography>
-                            <span className={classes.price}>₹{product.price.cost}</span>&nbsp;&nbsp;&nbsp; 
+                            <span className={classes.price}>${product.price.cost}</span>&nbsp;&nbsp;&nbsp; 
+                            <span className={classes.greyTextColor}><strike>${product.price.mrp}</strike></span>&nbsp;&nbsp;&nbsp;
+                            <span style={{color: '#388E3C'}}>{product.price.discount} off</span>
                         </Typography>
                         {loading ? <div></div> : (<ProductDetail product={product} />)}
                     </Grid>

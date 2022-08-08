@@ -119,7 +119,7 @@ const LoginDialog = ({ open, setOpen, setAccount }) => {
         else {
             showError(false);
             handleClose();
-            setAccount(response.data.username);
+            setAccount(response.data);
         }
     }
 
@@ -127,7 +127,7 @@ const LoginDialog = ({ open, setOpen, setAccount }) => {
         let response = await authenticateSignup(signup);
         if(!response) return;
         handleClose();
-        setAccount(signup.username);
+        setAccount(signup);
     }
     
     const toggleSignup = () => {

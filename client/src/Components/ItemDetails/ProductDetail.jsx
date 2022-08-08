@@ -1,6 +1,5 @@
 import { Box, Typography, makeStyles, Table, TableBody, TableRow, TableCell } from '@material-ui/core';
 import { LocalOffer as Badge } from '@material-ui/icons';
-import Seller from './Seller';
 
 const useStyle = makeStyles({
     smallText: {
@@ -50,15 +49,25 @@ const ProductDetail = ({ product }) => {
             <Table>
                 <TableBody>
                     <TableRow className={classes.smallText}>
-                        <TableCell className={classes.greyTextColor}>Description</TableCell>
+                        <TableCell style={{width: '15%'}} className={classes.greyTextColor}>Description</TableCell>
                         <TableCell>{product.description}</TableCell>
                     </TableRow>
                     <TableRow className={classes.smallText}>
-                        <TableCell className={classes.greyTextColor}>Seller</TableCell>
+                        <TableCell className={classes.greyTextColor}>Seller:</TableCell>
                         <TableCell className={classes.smallText}>
-                            {/* <span style={{ color: '#2874f0' }}>{seller.username}</span> */}
-                            <Typography>Phone:</Typography>
-                            <Typography>Email:</Typography>
+                            <span style={{ color: '#2874f0' }}>{seller.username}</span>
+                        </TableCell>
+                    </TableRow>
+                    <TableRow className={classes.smallText}>
+                        <TableCell className={classes.greyTextColor}>Phone:</TableCell>
+                        <TableCell className={classes.smallText}>
+                            <span style={{ color: '#2874f0' }}>{seller.phone}</span>
+                        </TableCell>
+                    </TableRow>
+                    <TableRow className={classes.smallText}>
+                        <TableCell className={classes.greyTextColor}>Email:</TableCell>
+                        <TableCell className={classes.smallText}>
+                            <span style={{ color: '#2874f0' }}>{seller.email}</span>
                         </TableCell>
                     </TableRow>
                 </TableBody>

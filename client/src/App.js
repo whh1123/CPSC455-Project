@@ -9,7 +9,6 @@ import Genre from './Components/Genre/Genre';
 import Myinfo from './Components/Info/Myinfo';
 import SearchProducts from './Components/Search/SearchProducts';
 import { Box } from '@material-ui/core'
-import Account from './Components/Info/Account';
 import Selling from './Components/Info/Selling';
 
 function App() {
