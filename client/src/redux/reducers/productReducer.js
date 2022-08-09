@@ -22,7 +22,16 @@ export const getGenreProductsReducer = (state = {products: []}, action) => {
             return state
     }
 };
-
+export const getSellerProductsReducer = (state = {products: []}, action) => {
+    switch(action.type) {
+        case actionTypes.GET_PRODUCTS_SELLER_SUCCESS:
+            return { products: action.payload }
+        case actionTypes.GET_PRODUCTS_SELLER_FAIL:
+            return { error: action.payload }
+        default:
+            return state
+    }
+};
 export const getKeywordProductsReducer = (state = {products: []}, action) => {
     switch(action.type) {
         case actionTypes.GET_PRODUCTS_KEYWORD_SUCCESS:

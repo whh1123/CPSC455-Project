@@ -32,6 +32,15 @@ export const getProductsByGenre = async (request, response) => {
         console.log(error)
     }
 }
+export const getProductsBySeller = async (request, response) => {
+    try {
+        const sellerID = request.params.sellerID;
+        const products = await Product.find({ seller: sellerID });
+        response.json(products);
+    }catch (error) {
+        console.log(error)
+    }
+}
 
 export const getProductsByKeyword = async (request, response) => {
     try {

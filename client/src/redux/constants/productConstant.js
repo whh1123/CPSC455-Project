@@ -12,3 +12,6 @@ export const GET_PRODUCTS_GENRE_FAIL = 'getProductsGenreFail'
 
 export const GET_PRODUCTS_KEYWORD_SUCCESS = 'getProductsKeywordSuccess'
 export const GET_PRODUCTS_KEYWORD_FAIL = 'getProductsKeywordFail'
+
+export const GET_PRODUCTS_SELLER_SUCCESS = 'getProductsSellerSuccess'
+export const GET_PRODUCTS_SELLER_FAIL = 'getProductsSellerFail'

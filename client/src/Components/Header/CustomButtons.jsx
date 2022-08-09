@@ -56,7 +56,12 @@ const CustomButtons = () => {
     const classes = useStyle();
     const [ open, setOpen ] = useState(false);
     const { account, setAccount } = useContext(LoginContext);
-
+    console.log("CustomButton")
+    var x = JSON.stringify(account)
+    console.log(account.user.username)
+    var myObject = JSON.parse(x)
+    var a = myObject.user
+    
     const cartDetails = useSelector(state => state.cart);
     const { cartItems } = cartDetails;
 

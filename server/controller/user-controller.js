@@ -6,7 +6,7 @@ export const userLogIn = async (request, response) => {
         console.log(user);
         console.log(request.body);
         if(user) {
-            return response.send({username:user.username});
+            return response.send({user:user});
         } else {
             return response.status(401).json('Invalid Login');
         }

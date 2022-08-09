@@ -23,7 +23,18 @@ export const getGenreProducts = (genre) => async (dispatch) => {
         dispatch({ type: actionTypes.GET_PRODUCTS_GENRE_FAIL, payload: error.response });
     }
 };
+export const getSellerProducts = (sellerID) => async (dispatch) => {
+    try {
+        console.log("This is seller ID")
+        console.log(sellerID)
+        const { data } = await axios.get(`http://localhost:8000/seller/${sellerID}`);
+        console.log(data)
+        dispatch({ type: actionTypes.GET_PRODUCTS_SELLER_SUCCESS, payload: data });
 
+    } catch (error) {
+        dispatch({ type: actionTypes.GET_PRODUCTS_SELLER_FAIL, payload: error.response });
+    }
+};
 export const getKeywordProducts = (keyword) => async (dispatch) => {
     try {
         console.log('Hiiiiii')

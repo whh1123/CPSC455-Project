@@ -120,6 +120,8 @@ const LoginDialog = ({ open, setOpen, setAccount }) => {
             showError(false);
             handleClose();
             setAccount(response.data);
+            console.log("response data")
+            console.log(response.data)
         }
     }
 

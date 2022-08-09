@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from "./Navbar";
-import Account from './Account';
+
 import Selling from './Selling';
 import { BrowserRouter as Router,
     Switch,
@@ -115,7 +115,7 @@ const Myinfo = () => {
                     <Route exact path={path}>
                     </Route>
                     <Route path={`${path}/account`}>
-                    <Account />
+                    
                     </Route>
                     <Route path={`${path}/selling`}>
                     <Selling />

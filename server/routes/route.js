@@ -1,5 +1,5 @@
 import express from  'express';
-import { getProductById, getProducts, getProductsByGenre, getProductsByKeyword } from '../controller/product-controller.js';
+import { getProductById, getProducts, getProductsByGenre, getProductsByKeyword ,getProductsBySeller} from '../controller/product-controller.js';
 import { userSignUp, userLogIn } from '../controller/user-controller.js';
 import { addItemInCart } from '../controller/cart-controller.js';
 import { createOrder } from '../controller/payment-controller.js';
@@ -18,7 +18,7 @@ router.get('/product/:id', getProductById);
 
 router.get('/genre/:genre', getProductsByGenre);
 router.get('/search/:keyword', getProductsByKeyword);
-
+router.get('/seller/:sellerID',getProductsBySeller)
 router.post('/cart/add', addItemInCart);
 
 router.get('/get-razorpay-key', (req, res) => {
